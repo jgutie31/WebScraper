@@ -15,7 +15,7 @@ namespace Scraper
             Console.WriteLine("Please enter a search term:");
             var searchTerm = Console.ReadLine();
             var mainPageLinks = GetMainPageLinks("https://mcallen.craigslist.org/d/computer-gigs/search/cpg");
-            var lstGigs = GetPageDetails(mainPageLinks, searchTerm);
+            var lstGigs = GetPageDetails(mainPageLinks);
         }
 
         static List<string> GetMainPageLinks(string url)
