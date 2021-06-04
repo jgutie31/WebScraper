@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "CsvHelper/27.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/CsvHelper.dll": {}
+        }
+      },
       "FSharp.Core/4.5.2": {
         "type": "package",
         "compile": {
@@ -1017,6 +1026,28 @@
     }
   },
   "libraries": {
+    "CsvHelper/27.1.0": {
+      "sha512": "nrUpgvwEOq6xcdpvAMV0bnzVz1mHcPy9LjWXVbZq9pKs5nWdVFmUMoiEBsxY9+f1mR2Rdk0fOkK91OstYjTVxA==",
+      "type": "package",
+      "path": "csvhelper/27.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.27.1.0.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net45/CsvHelper.dll",
+        "lib/net45/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net5.0/CsvHelper.dll",
+        "lib/net5.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
     "FSharp.Core/4.5.2": {
       "sha512": "apbdQOjzsjQ637kTWQuW29jqwY18jsHMyNC5A+TPJZKFEIE2cIfQWf3V7+mXrxlbX69BueYkv293/g70wuXuRw==",
       "type": "package",
@@ -3644,6 +3675,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "CsvHelper >= 27.1.0",
       "ScrapySharp >= 3.0.0"
     ]
   },
@@ -3684,6 +3716,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "CsvHelper": {
+            "target": "Package",
+            "version": "[27.1.0, )"
+          },
           "ScrapySharp": {
             "target": "Package",
             "version": "[3.0.0, )"
